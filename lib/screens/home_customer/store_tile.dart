@@ -9,6 +9,7 @@ class StoreTile extends StatelessWidget {
   int something=0;
   @override
   Widget build(BuildContext context) {
+    String imageLoc = 'Groceries/' + store.imageLoc;
     return Padding(
       padding: EdgeInsets.only(top: 8.0),
       child: Card(
@@ -21,7 +22,7 @@ class StoreTile extends StatelessWidget {
             leading: CircleAvatar(
               radius: 25.0,
               backgroundColor: Colors.brown[400],
-              backgroundImage: AssetImage(store.imageLoc),
+              backgroundImage: AssetImage(imageLoc),
             ),
             title: Text(store.name),
             subtitle: Text(store.address),
